@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey and Feedback Form</title>
+<style>
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #dfe9f3, #ffffff);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+.form-container {
+background: #fff;
+padding: 30px 40px;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+width: 420px;
+}
+.form-container:hover {
+transform: scale(1.02);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+h2 {
+text-align: center;
+color: #333;
+margin-bottom: 20px;
+}
+.form-group {
+margin-bottom: 15px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+color: #333;
+font-weight: 500;
+}
+input[type="text"],
+
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+width: 100%;
+padding: 10px;
+border: 2px solid #ccc;
+border-radius: 8px;
+font-size: 14px;
+transition: border-color 0.3s ease, transform 0.3s ease;
+}
+input:focus,
+select:focus,
+textarea:focus {
+border-color: #4CAF50;
+transform: scale(1.02);
+outline: none;
+}
+.rating {
+display: flex;
+justify-content: space-between;
+margin: 10px 0;
+}
+.rating label {
+flex: 1;
+text-align: center;
+background: #f1f1f1;
+padding: 8px;
+border-radius: 6px;
+cursor: pointer;
+}
+.rating input {
+display: none;
+}
+.rating label:hover,
+.rating input:checked + label {
+background: #4CAF50;
+color: white;
+}
+textarea {
+resize: none;
+height: 80px;
+}
+button {
+
+width: 100%;
+padding: 12px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+background-color: #45a049;
+transform: translateY(-3px);
+}
+</style>
+</head>
+<body>
+<div class="form-container">
+<h2>User Survey & Feedback Form</h2>
+<form>
+<div class="form-group">
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" placeholder="Enter your age" min="10"
+max="100">
+</div>
+<div class="form-group">
+<label for="gender">Gender:</label>
+<select id="gender" name="gender">
+<option value="">Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Rate Your Experience:</label>
+<div class="rating">
+<input type="radio" id="rate1" name="rating" value="1">
+
+<label for="rate1">1</label>
+<input type="radio" id="rate2" name="rating" value="2">
+<label for="rate2">2</label>
+<input type="radio" id="rate3" name="rating" value="3">
+<label for="rate3">3</label>
+<input type="radio" id="rate4" name="rating" value="4">
+<label for="rate4">4</label>
+<input type="radio" id="rate5" name="rating" value="5">
+<label for="rate5">5</label>
+</div>
+</div>
+<div class="form-group">
+<label for="feedback">Share Your Feedback:</label>
+<textarea id="feedback" name="feedback" placeholder="Write your feedback
+here..."></textarea>
+</div>
+<div class="form-group">
+<label for="experience">Tell Us About Your Experience:</label>
+
+<textarea id="experience" name="experience" placeholder="Describe your experi-
+ence..."></textarea>
+
+</div>
+<button type="submit">Submit Feedback</button>
+</form>
+</div>
+</body>
+</html>
